@@ -9,10 +9,10 @@ Depending on the geometry of the problem at hand, the included surface normal fi
 ### Important pages
 * [Download latest version v1.0!](https://github.com/FranckLab/LD-3D-TFM/releases)
 * [Example data](https://drive.google.com/folderview?id=0ByhZqlrbo5srdFhWampiT0g4Xzg&usp=sharing)
-* [FAQ](https://github.com/FranckLab/3D-VTFM#faq)
-* [Questions/Issues](https://github.com/FranckLab/3D-VTFM/issues)
-* [Bug Fixes/history](https://github.com/FranckLab/3D-VTFM/wiki/Bug-Fixes!)
-* [Cite](https://github.com/FranckLab/3D-VTFM#cite)
+* [FAQ](https://github.com/FranckLab/LD-3D-TFM#faq)
+* [Questions/Issues](https://github.com/FranckLab/LD-3D-TFM/issues)
+* [Bug Fixes/history](https://github.com/FranckLab/LD-3D-TFM/wiki/Bug-Fixes!)
+* [Cite](https://github.com/FranckLab/LD-3D-TFM#cite)
 * [Franck Lab](http://franck.engin.brown.edu)
  
 ## Running 3D-VTFM
@@ -77,5 +77,5 @@ If used please cite:
 ```
 
 ## Contact and support
-For questions, please first refer to [FAQ](https://github.com/FranckLab/3D-VTFM#faq) and [Questions/Issues](https://github.com/FranckLab/3D-VTFM/issues). Add a new question if similar issue hasn't been reported. We shall help you at the earliest. The author's contact information can be found at [Franck Lab](http://franck.engin.brown.edu).
+For questions, please first refer to [FAQ](https://github.com/FranckLab/LD-3D-TFM#faq) and [Questions/Issues](https://github.com/FranckLab/LD-3D-TFM/issues). Add a new question if similar issue hasn't been reported. We shall help you at the earliest. The author's contact information can be found at [Franck Lab](http://franck.engin.brown.edu).
 
