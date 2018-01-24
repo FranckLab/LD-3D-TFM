@@ -51,6 +51,9 @@
 %         u{time}{2} = displacement in y-direction at t=time of size MxNxP
 %         u{time}{3} = displacement in z-direction at t=time of size MxNxP
 %   cc: peak values of the cross-correlation for each interrogation
+%   dm: meshgrid spacing (8 by default)
+%   m:  The grid points at which displacements are computed. The grid 
+%        points locations are in the same format as 'u'.
 % 
 % NOTES
 % -------------------------------------------------------------------------
@@ -64,7 +67,7 @@
 
 clear; close all;
 
-sSize = [96 128 64];
+sSize = [128 128 64];
 incORcum = 'incremental';
 filename = 'vol*.mat';
 
@@ -164,4 +167,3 @@ for i = 1:3
     xlabel('X_1'); ylabel('X_2');
 end
 
-plotIdx{1}, plotIdx{2},

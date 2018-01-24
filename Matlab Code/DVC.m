@@ -60,11 +60,19 @@ for k = 1:mSize_
     [u1, u2, u3] = ind2sub(sSize,maxIdx);
     
     % gather the 3x3x3 voxel neighborhood around the peak
-    xCorrPeak = reshape(A(u1 + (-1:1), u2 + (-1:1), u3 + (-1:1)),27,1);
-    
-    % least squares fitting of the peak to calculate sub-voxel displacements
-    du123 = lsqPolyFit3(xCorrPeak, M{1}, M{2});
-    u123(k,:) = [u1 u2 u3] + du123' - (sSize/2) - 1;
+    try xCorrPeak = reshape(A(u1 + (-1:1), u2 + (-1:1), u3 + (-1:1)),27,1);        
+        % last squares fitting of the peak to calculate sub-voxel displacements
+        du123 = lsqPolyFit3(xCorrPeak, M{1}, M{2});       
+        u123(k,:) = [u1 u2 u3] + du123' - sSize/2 - 1;
+        %--------------------------------------------------------------------------
+    catch
+        u123(k,:) = nan;
+    end    
+%     xCorrPeak = reshape(A(u1 + (-1:1), u2 + (-1:1), u3 + (-1:1)),27,1);
+%     
+%     % least squares fitting of the peak to calculate sub-voxel displacements
+%     du123 = lsqPolyFit3(xCorrPeak, M{1}, M{2});
+%     u123(k,:) = [u1 u2 u3] + du123' - (sSize/2) - 1;
     %--------------------------------------------------------------------------
     
     % waitbar calculations (update only every 100 iterations)
@@ -207,7 +215,7 @@ function varargout = generateMTF(sSize)
 
 %% equation 4
 
-if prod(single(sSize == 32))
+if prod(single(sSize == 32)) || prod(single(sSize == 16))
     sSize = sSize(1);
     
     x = cell(1,3);
@@ -275,7 +283,9 @@ ccMask = double(cc >= ccThreshold);
 
 CC = bwconncomp(~ccMask);
 [~,idx] = max(cellfun(@numel,CC.PixelIdxList));
-ccMask(CC.PixelIdxList{idx}) = inf;
+if ~isempty(idx)
+    ccMask(CC.PixelIdxList{idx}) = inf;
+end
 ccMask(cc == 0) = nan;
 ccMask(~isfinite(ccMask)) = 0;
 cc = cc.*ccMask;

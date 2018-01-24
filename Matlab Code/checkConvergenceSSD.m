@@ -64,26 +64,30 @@ if iteration > 1 % skip before first displacement estimation
     sSize1(sSize1 < 32) = 32; 
     
     % window spacing refinement. Only do if the sSpacing > 8 voxels
-    if (sSpacing0 > 8), sSpacing1 = sSize1/2; end 
+    if (sSpacing0 > 8), sSpacing1 = sSize1/2;
+             
+
+    end 
     
     if prod(single(sSpacing1 == 16)) % condition if spacing = 16
-        
-        idx = (find(prod(single(sSpacing == 16,2)))-1):iteration;
-        
+      
+        idx = (find(prod(single(sSpacing == 16),2))-1):iteration;
+        idx = idx(idx~=0);
         if length(idx) > 2
             dSSE = diff(SSE(idx)); % calculate difference
             dSSE = dSSE/dSSE(1); % normalize difference
-            
+             
             % if dSSE meets first convergence criteria then refine spacing
             % to the minimum value, 8 voxels.
             if dSSE(end) <= convergenceCrit(1)
                 sSize1 = sSize0; sSpacing1 = [8 8 8]; 
+                
             end
         end
         
     % condition if spacing is the minimum, 8 voxels
     elseif  prod(single(sSpacing1 == 8))
-        idx = (find(prod(single(sSpacing == 8,2)))-1):iteration;
+        idx = (find(prod(single(sSpacing == 8),2))-1):iteration;
         
         if length(idx) > 2
             dSSE = diff(SSE(idx));

@@ -69,7 +69,7 @@ function [Fij, Sij, Eij, Uhat, ti, tiPN] = fun3DTFM(varargin)
 % doi:10.1371/journal.pone.0090976
 
 [u, dm, surface, normals, materialModel, materialProps, OS] ...
-    = parseInputsTFM(varargin{:})
+    = parseInputsTFM(varargin{:});
 
 % DEFORMATION GRADIENT
 [Fij, J] = calculateFij(u,dm,'optimal9');
