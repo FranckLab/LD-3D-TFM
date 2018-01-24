@@ -7,7 +7,7 @@ Depending on the geometry of the problem at hand, the included surface normal fi
 
 
 ### Important pages
-* [Download latest version v1.0!](https://github.com/FranckLab/LD-3D-TFM/releases)
+* [Download latest version v1.1!](https://github.com/FranckLab/LD-3D-TFM/releases)
 * [Example data](https://drive.google.com/folderview?id=0ByhZqlrbo5srdFhWampiT0g4Xzg&usp=sharing)
 * [FAQ](https://github.com/FranckLab/LD-3D-TFM#faq)
 * [Questions/Issues](https://github.com/FranckLab/LD-3D-TFM/issues)
