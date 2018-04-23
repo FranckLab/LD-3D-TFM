@@ -375,7 +375,7 @@ else
     Ix = -imfilter(Ix,d,'same',padOpt);
     Iy = -imfilter(Iy,d','same',padOpt);
     Iz = -imfilter(Iz,reshape(d,1,1,[]),'same',padOpt);
-    varargout{3} = Iz;
+    varargout{3} = Iz;   
 end
 
 varargout{1} = Ix; varargout{2} = Iy;
@@ -483,7 +483,7 @@ end
 
 
 tiPN = cell(maxTime,1);
-for k = 1:maxTime
+for k = 1:maxTime  
     tiNormal{k} = abs(ti{k}{1}.*n{k+1,1}{1}+ti{k}{2}.*n{k+1,1}{2}+ti{k}{3}.*n{k+1,1}{3});
     for m = 1:3
         tiParallel_{k}{m} = ti{k}{m}-tiNormal{k}.*n{k+1,1}{m};
@@ -538,7 +538,9 @@ OS = varargin{4};
 mSize = size(Sij{1}{1});
 dm = s{1}{2}(2) - s{1}{2}(1);
 idx = cell(1,3);
-for i = 1:3; idx{i} = (1:dm:mSize(i)*dm); end
+idx{1} = (1:dm:mSize(2)*dm);
+idx{2} = (1:dm:mSize(1)*dm);
+idx{3} = (1:dm:mSize(3)*dm);
 [m{1}, m{2}, m{3}] = meshgrid(idx{:});
 
 varargout{      1} = Sij;

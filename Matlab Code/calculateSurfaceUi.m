@@ -208,9 +208,11 @@ um2vxl = varargin{4};
 OS = varargin{5};
 
 
-idx = cell(1,3);
-for i = 1:3; idx{i} = (1:mSpacing:mSize(i)*mSpacing); end
+idx{1} = (1:mSpacing:mSize(2)*mSpacing);
+idx{2} = (1:mSpacing:mSize(1)*mSpacing);
+idx{3} = (1:mSpacing:mSize(3)*mSpacing);
 [m{1}, m{2}, m{3}] = meshgrid(idx{:});
+
 
 varargout{    1} = u;
 varargout{end+1} = m;
