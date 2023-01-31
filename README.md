@@ -29,7 +29,7 @@ To run you need a compatible C compiler. Please see
 
 ### Running included example case
 1. Make sure that the main files and the supplemental m files (from file exchange) are added to the path in Matlab.
-2. Download and save the [example volume data](https://drive.google.com/folderview?id=0ByhZqlrbo5srdFhWampiT0g4Xzg&usp=sharing) in the example folder. 
+2. Download and save the [example volume data](https://app.globus.org/file-manager?origin_id=86401693-5974-4013-b498-eb4484e08eb4&origin_path=%2FFranckLab%2FLD-3D-TFM_example%2F) in the example folder. 
 3. Run the exampleRunFile.m file
 
 ### Health warning!
