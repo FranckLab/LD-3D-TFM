@@ -8,7 +8,7 @@ Depending on the geometry of the problem at hand, the included surface normal fi
 
 ### Important pages
 * [Download latest version v1.1!](https://github.com/FranckLab/LD-3D-TFM/releases)
-* [Example data](https://drive.google.com/folderview?id=0ByhZqlrbo5srdFhWampiT0g4Xzg&usp=sharing)
+* [Example data](https://app.globus.org/file-manager?origin_id=86401693-5974-4013-b498-eb4484e08eb4&origin_path=%2FFranckLab%2FLD-3D-TFM_example%2F)
 * [FAQ](https://github.com/FranckLab/LD-3D-TFM#faq)
 * [Questions/Issues](https://github.com/FranckLab/LD-3D-TFM/issues)
 * [Bug Fixes/history](https://github.com/FranckLab/LD-3D-TFM/wiki/Bug-Fixes!)
@@ -50,7 +50,7 @@ FIDVC in the 3D-VTFM requires a 3D stack to be read in, which depending on the v
 
 * Example Run files
  - exampleRunFile.m
- - [example volume data](https://drive.google.com/folderview?id=0ByhZqlrbo5srdFhWampiT0g4Xzg&usp=sharing) (vol00.mat, vol01.mat).
+ - [example volume data](https://app.globus.org/file-manager?origin_id=86401693-5974-4013-b498-eb4484e08eb4&origin_path=%2FFranckLab%2FLD-3D-TFM_example%2F) (vol00.mat, vol01.mat).
 
 ## FAQ
 **What are the requirements for the input 3D image stack?**
